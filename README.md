@@ -27,7 +27,7 @@ mvn clean install
 3. **Run the application:**
 mvn spring-boot:run
 
-4. **Access locally:**
+4. **Access locally:**  
 API Base URL: http://localhost:8080  
 Swagger UI: http://localhost:8080/swagger-ui/index.html  
 H2 Console: http://localhost:8080/h2-console
