@@ -1,6 +1,6 @@
 # Customer Management API
 
-This is a Spring Boot-based RESTful API for managing customer data, built as part of a coding challenge. It supports full CRUD operations, real-time membership tier calculation based on `annualSpend` and `lastPurchaseDate`, and includes validation, OpenAPI documentation, unit testing, and H2 in-memory database support.
+This is a Spring Boot-based RESTful API for managing customer data, built as part of a coding challenge. It supports full CRUD operations, real-time membership tier calculation based on annualSpend and lastPurchaseDate, and includes validation, OpenAPI documentation, unit testing, and H2 in-memory database support.
 
 ## Technologies Used
 
