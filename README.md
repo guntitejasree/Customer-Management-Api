@@ -33,7 +33,7 @@ Swagger UI: http://localhost:8080/swagger-ui/index.html
 H2 Console: http://localhost:8080/h2-console
 
 5. **Sample API Requests:**
-   * POST /customers: http://localhost:8080/customers  
+* POST /customers: http://localhost:8080/customers  
 Content-Type: application/json  
 
 {  
@@ -52,10 +52,9 @@ http://localhost:8080/customers?name=teja
 * Get Customer by Email: /customers?email={email}  
   GET http://localhost:8080/customers?email=teja@yahoo.com
 
-  * Update a Customer: PUT /customers/{id}  
-    http://localhost:8080/customers/9fa93a83-cc2a-4ecf-b3ad-9f72bd43b402  
-Content-Type: application/json  
-
+* Update a Customer: PUT /customers/{id}  
+  http://localhost:8080/customers/9fa93a83-cc2a-4ecf-b3ad-9f72bd43b402    
+  Content-Type: application/json    
 {  
   "name": "Teja G. Sree",  
   "email": "teja@yahoo.com",  
@@ -74,7 +73,7 @@ Password:
 
 9. **Tier Calculation Logic**
 
-The customer membership tier is calculated dynamically at the time of retrieval based on their `annualSpend` and `lastPurchaseDate`. The tier is not stored in the database.  
+The customer membership tier is calculated dynamically at the time of retrieval based on their annualSpend and lastPurchaseDate. The tier is not stored in the database.  
 
 | Tier       | Annual Spend Range            | Last Purchase Recency               |
 |------------|-------------------------------|-------------------------------------|
@@ -84,10 +83,10 @@ The customer membership tier is calculated dynamically at the time of retrieval 
 
 ### Examples  
 
-- $800` annualSpend → **Silver**
-- $2,500` annualSpend with last purchase 11 months ago → **Gold**
-- $12,000` annualSpend with last purchase 4 months ago → **Platinum**
-- $12,000` annualSpend with last purchase 8 months ago → **Silver** (no tier upgrade due to date)
+- $800 annualSpend → **Silver**
+- $2,500 annualSpend with last purchase 11 months ago → **Gold**
+- $12,000 annualSpend with last purchase 4 months ago → **Platinum**
+- $12,000 annualSpend with last purchase 8 months ago → **Silver** (no tier upgrade due to date)
 
 10. **Assumptions:**
 * id is auto-generated using UUID.
