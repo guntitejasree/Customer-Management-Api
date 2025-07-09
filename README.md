@@ -63,7 +63,7 @@ http://localhost:8080/customers?name=teja
 }   
 
 * Delete a Customer: DELETE /customers/{id}  
-  http://localhost:8085/customers/9fa93a83-cc2a-4ecf-b3ad-9f72bd43b402
+  http://localhost:8080/customers/9fa93a83-cc2a-4ecf-b3ad-9f72bd43b402
   
 7. **H2 Database Console**  
 URL: http://localhost:8080/h2-console  
