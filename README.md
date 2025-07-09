@@ -36,12 +36,12 @@ H2 Console: http://localhost:8080/h2-console
 * POST /customers: http://localhost:8080/customers  
 Content-Type: application/json  
 
-{  
-  "name": "Teja Sree",  
-  "email": "teja@yahoo.com",  
-  "annualSpend": 5200.75,  
-  "lastPurchaseDate": "2025-05-01T10:00:00"  
-}  
+   {  
+     "name": "Teja Sree",  
+     "email": "teja@yahoo.com",  
+     "annualSpend": 5200.75,  
+     "lastPurchaseDate": "2025-05-01T10:00:00"  
+   }  
 
 * Get Customer by ID:  /customers/{id}  
 GET http://localhost:8080/customers/9fa93a83-cc2a-4ecf-b3ad-9f72bd43b402
@@ -73,7 +73,7 @@ Password:
 
 9. **Tier Calculation Logic**
 
-The customer membership tier is calculated dynamically at the time of retrieval based on their annualSpend and lastPurchaseDate. The tier is not stored in the database.  
+   The customer membership tier is calculated dynamically at the time of retrieval based on their annualSpend and lastPurchaseDate. The tier is not stored in the database.  
 
 | Tier       | Annual Spend Range            | Last Purchase Recency               |
 |------------|-------------------------------|-------------------------------------|
