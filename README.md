@@ -38,8 +38,8 @@ H2 Console: http://localhost:8080/h2-console
 Content-Type: application/json
 
 {
-  "name": "Jane Doe",
-  "email": "jane.doe@example.com",
+  "name": "Teja Sree",
+  "email": "teja@yahoo.com",
   "annualSpend": 5200.75,
   "lastPurchaseDate": "2025-05-01T10:00:00"
 }
@@ -58,20 +58,39 @@ http://localhost:8080/customers?name=teja
 Content-Type: application/json
 
 {
-  "name": "Jane D. Smith",
-  "email": "jane.smith@example.com",
+  "name": "Teja G. Sree",
+  "email": "teja@yahoo.com",
   "annualSpend": 11000.00,
   "lastPurchaseDate": "2025-06-10T15:45:00"
 }
 
 * Delete a Customer: DELETE /customers/{id}
-  http://localhost:8080/customers/9fa93a83-cc2a-4ecf-b3ad-9f72bd43b402
+  http://localhost:8085/customers/9fa93a83-cc2a-4ecf-b3ad-9f72bd43b402
   
 7. **H2 Database Console**
+URL: http://localhost:8080/h2-console
+JDBC URL: jdbc:h2:mem:testdb
+Username: teja
+Password: 
 
-8. **Tier Calculation Logic**
+9. **Tier Calculation Logic**
 
-9. **Assumptions:**
+The customer membership tier is calculated dynamically at the time of retrieval based on their `annualSpend` and `lastPurchaseDate`. The tier is not stored in the database.
+
+| Tier       | Annual Spend Range            | Last Purchase Recency               |
+|------------|-------------------------------|-------------------------------------|
+| **Silver**   | Less than **$1,000**             | Anytime                              |
+| **Gold**     | **$1,000 – $9,999.99**           | Within the **last 12 months**         |
+| **Platinum** | **$10,000 or more**             | Within the **last 6 months**          |
+
+### Examples
+
+- `$800` annualSpend → **Silver**
+- `$2,500` annualSpend with last purchase 11 months ago → **Gold**
+- `$12,000` annualSpend with last purchase 4 months ago → **Platinum**
+- `$12,000` annualSpend with last purchase 8 months ago → **Silver** (no tier upgrade due to date)
+
+10. **Assumptions:**
 * id is auto-generated using UUID.
 * Email is validated via regex.
 * Duplicate names/emails are allowed.
