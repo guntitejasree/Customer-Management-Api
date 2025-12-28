@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class CustomerRequest {
 	//class to get the customer request
     @NotBlank
-    private String name;
+    private String names;
 
     @NotBlank
     @Email
