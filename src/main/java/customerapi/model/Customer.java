@@ -22,11 +22,11 @@ public class Customer {
     private UUID id;
 
     @NotBlank
-    private String name;
+    private String Rollnumber;
 
     @NotBlank
     @Email
-    private String email;
+    private String marks;
 
     private Double annualSpend;
 
